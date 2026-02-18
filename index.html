@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lyne's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: "#0e0e11",
+            card: "#16161d",
+            accent: "#6cf2c2",
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all 0.9s cubic-bezier(.19,1,.22,1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+
+<body class="bg-bg text-white scroll-smooth">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full backdrop-blur bg-black/30 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4">
+    <span class="font-bold text-lg">Lyne GHRIBI</span>
+
+    <div class="flex items-center gap-6 text-sm text-gray-300">
+      <a href="#about" class="hover:text-accent">About</a>
+      <a href="#projects" class="hover:text-accent">Projects</a>
+      <a href="#experience" class="hover:text-accent">Experience</a>
+      <a href="#certificates" class="hover:text-accent">Certificates</a>
+
+       <!-- Social -->
+      <a href="https://github.com/Lyne-Gh" target="_blank" class="hover:text-accent">GitHub</a>
+      <a href="https://www.linkedin.com/in/lyne-ghribi/" target="_blank" class="hover:text-accent">LinkedIn</a>
+
+      <!-- Language -->
+      <button onclick="toggleLang()" class="opacity-70 hover:opacity-100 transition">
+        EN / FR
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section
+  class="relative min-h-screen flex items-center justify-center px-10 
+         bg-[url('bg2.jpg')] bg-cover bg-center overflow-hidden">
+
+  <!-- Fade overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black"></div>
+
+  <!-- Content -->
+  <div class="relative grid md:grid-cols-2 gap-16 items-center max-w-7xl">
+
+    <div>
+      <h1 class="text-5xl font-bold mb-4 lang-en">
+        Hi, I’m <span class="text-accent">Lyne Ghribi</span>
+      </h1>
+
+      <h1 class="text-5xl font-bold mb-4 lang-fr hidden">
+        Hi, Je suis <span class="text-accent">Lyne Ghribi</span>
+      </h1>
+
+      <p class="text-gray-100 text-lg mb-8 lang-en">
+        I’m a 22-year-old creative with a background in computer engineering and computer science, passionate about using
+        technology in smart, practical ways. I love designing IoT systems that make everyday things smarter from sustainable vending machines to connected coffee makers while exploring my artistic side through drawing and storytelling in video games. I aim to merge creativity and technology to craft experiences that are both innovative and meaningful.
+      </p>
+      <p class="text-gray-100 text-lg mb-8 lang-fr hidden">
+        Je suis une créative de 22 ans avec une formation en ingénierie des systèmes informatiques et en informatique, passionnée par l’utilisation pratique et intelligente de la technologie. J’aime concevoir des systèmes IoT qui rendent le quotidien plus connecté des distributeurs automatiques durables aux machines à café intelligentes tout en explorant mon côté artistique à travers le dessin et la création d’histoires dans les jeux vidéo. Mon objectif est de combiner créativité
+        et technologie pour imaginer des expériences à la fois innovantes et impactantes.
+      </p>
+
+      <div class="space-x-4">
+        <a href="#projects" class="px-6 py-3 bg-accent text-black rounded-lg font-semibold">
+          View Projects
+        </a>
+
+        <a href="CV.pdf" download class="px-6 py-3 border border-gray-600 rounded-lg">
+            Download CV
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <img src="me.jpg"
+           class="w-64 h-64 rounded-full object-cover border-4 border-accent shadow-xl">
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="px-10 py-32 max-w-6xl mx-auto reveal">    
+    <h2 class="text-4xl font-semibold mb-8">
+        <span class="lang-en">About Me</span>
+        <span class="lang-fr hidden">À propos de moi</span>
+    </h2>
+
+  <p class="text-gray-400 max-w-3xl mb-10 lang-en">
+    I am a computer engineering graduate specialized in IoT and currently completing my bachelor’s degree in computer science, 
+    aiming to earn my second bachelor’s degree by summer 2026.
+    <br>
+    During my time as a student at both The Higher Institute of Information Technologies and Communication and University of Orléans, 
+    I nurtured my curiosity by exploring a variety of projects and participating in clubs and extracurricular activities.
+    <br>
+    I thrive on learning, experimenting, and evolving, always seeking new ways to combine technology, creativity, 
+    and practical solutions to tackle real-world challenges.
+  </p>
+
+  <p class="text-gray-400 max-w-3xl mb-10 lang-fr hidden">
+    Je suis diplômée en ingénierie informatique, spécialisée en IoT, 
+    et je poursuis actuellement ma licence en informatique, avec l’objectif d’obtenir mon deuxième diplôme d’ici l’été 2026.
+    <br>
+    Durant mon parcours à la fois à l’Institut Supérieur des Technologies de l’Information et de la Communication et à l’Université d’Orléans, 
+    j’ai cultivé ma curiosité en explorant divers projets et en participant à des clubs et activités extracurriculaires.
+    <br>
+    Je m’épanouis dans l’apprentissage, l’expérimentation et l’évolution constante, 
+    toujours à la recherche de nouvelles façons de conjuguer technologie, créativité et solutions concrètes pour relever des défis réels.
+  </p>
+</section>
+
+<!-- CURIOSITY FEED -->
+<section class="px-10 py-32 bg-black/20 reveal">
+  <h2 class="text-4xl font-bold mb-12">Curiosity Feed</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div class="bg-card p-6 rounded-xl">
+    📘 Currently learning 
+    <strong>The Complete Web Development Bootcamp</strong> by Angela Yu on 
+    <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="text-accent underline" target="_blank">Udemy</a> — <em>1/3 completed</em>
+    </div>
+    <div class="bg-card p-6 rounded-xl">
+    ▶️ Watching <strong>Beginner’s Guide to GameMaker</strong> by 
+    <a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP" class="text-accent underline" target="_blank">Sara Spalding</a>, 
+    inspired by my interest in RPG game development, especially games like <em>Undertale</em>.
+    </div>
+
+    <div class="bg-card p-6 rounded-xl">
+    ▶️ Watching <strong>“Hamilton and the Death of the Obama Era”</strong> by 
+    <a href="https://www.youtube.com/watch?v=X5aI2AGvkb4" class="text-accent underline" target="_blank">Alexander Avila</a>, 
+    a longform documentary‑style video essay examining the cultural and political influence of the musical *Hamilton* in the context of American politics and the Obama era.
+    </div>
+
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="px-10 py-32 max-w-7xl mx-auto reveal">
+  <h2 class="text-4xl font-bold mb-12">Projects</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+      <h3 class="font-semibold text-xl mb-2">
+        Automated Wi-Fi Qualification tests and Throughput Analysis Platform.
+      </h3>
+
+      <div class="text-xs text-accent italic mt-2">
+        Technologies used: Django, Python, FastAPI, MariaDB, Bootstrap. 
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4">
+        During my professional internship, I developed a Wi-Fi throughput testing platform that automates the existing process. It allows users to send tests to the setup, 
+        receive ready-made reports with graphs, and create custom test cases or use pre-configured test packages.
+      </p>
+      
+      <button
+        onclick="openProjectModal('throughput')"
+        class="text-sm text-accent hover:underline"
+      >
+        View details
+      </button>
+    </div>
+
+    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+        <h3 class="font-semibold text-xl mb-2">
+            Personal Website
+        </h3>
+
+        <div class="text-xs text-accent italic mt-2">
+            Technologies used: HTML, JavaScript, Tailwind CSS
+        </div>
+
+        <p class="text-gray-400 text-sm mb-4">
+            This portfolio you're exploring is a passion project of mine, where I aimed to express myself in every section and detail while showcasing my projects, skills, and experience.
+        </p>
+    </div>
+
+    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+        <h3 class="font-semibold text-xl mb-2">
+            Autonest – Smart Parking System
+        </h3>
+
+        <div class="text-xs text-accent italic mt-2">
+            Technologies used: ESP32, MQTT, Wi-Fi, Distance Sensors, Node-RED
+        </div>
+
+        <p class="text-gray-400 text-sm mb-4">
+            During our 5th semester IoT course, we developed Autonest, a smart parking system that detects car presence in real time. We also explored scalable features such as potential spot reservations for users.
+        </p>
+
+        <a href="https://github.com/Lyne-Gh/Autonest-presentation/blob/main/Autonest%20presentation.pptx" target="_blank" class="text-sm text-accent hover:underline">
+            View Presentation
+        </a>
+    </div>
+
+    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+        <h3 class="font-semibold text-xl mb-2">
+            VITAWise – Smart Health Monitoring Dashboard
+        </h3>
+
+        <div class="text-xs text-accent italic mt-2">
+            Technologies used: HTML, JavaScript, CSS
+        </div>
+
+        <p class="text-gray-400 text-sm mb-4">
+            During our early IoT semester, we developed VITAWise, a hypothetical smartwatch dashboard where doctors can monitor patients’ vital signs in real time. The project focused on designing the system, interfaces, and workflow to track heart rate, body temperature, and other health parameters.
+        </p>
+
+        <button
+            onclick="openProjectModal('vitawise')"
+            class="text-sm text-accent hover:underline"
+        >
+            View details
+        </button>
+    </div>
+
+    <!-- Project 6 (Simple) -->
+    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+      <h3 class="font-semibold text-xl mb-2">
+        API Performance Benchmarking
+      </h3>
+      <p class="text-gray-400 text-sm">
+        Benchmarked REST APIs under high-load scenarios.
+      </p>
+    </div>
+
+    <!-- Project 7 (Simple) -->
+    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+      <h3 class="font-semibold text-xl mb-2">
+        Monitoring & Alerting System
+      </h3>
+      <p class="text-gray-400 text-sm">
+        Real-time monitoring and alerting for system health.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div id="project-modal"
+     class="fixed inset-0 bg-black/80 backdrop-blur-md hidden z-50">
+
+  <div class="h-full w-full overflow-y-auto">
+    <div class="max-w-4xl mx-auto px-6 py-20 relative">
+
+      <button
+        onclick="closeProjectModal()"
+        class="absolute top-6 right-6 text-2xl text-gray-400 hover:text-white"
+      >
+        ✕
+      </button>
+
+      <!-- Dynamic content -->
+      <div id="project-modal-content"></div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- EXPERIENCE -->
+<section id="experience" class="px-10 py-32 bg-black/20 reveal">
+  <h2 class="text-4xl font-bold mb-12">Experience</h2>
+
+  <div class="max-w-4xl space-y-8">
+    <div class="border-l-4 border-accent pl-6">
+      <h3 class="font-semibold">September 1st 2025 — France </h3>
+      <p class="text-gray-400">Final year student Studying computer science at the University of Orléans. </p>
+    </div>
+  </div>
+
+  <br>
+   <div class="max-w-4xl space-y-8">
+    <div class="border-l-4 border-accent pl-6">
+      <h3 class="font-semibold">Feb - May 2025 — Sagemcom megrine </h3>
+      <p class="text-gray-400">End of study project internship.</p>
+    </div>
+  </div>
+
+  <br>
+   <div class="max-w-4xl space-y-8">
+    <div class="border-l-4 border-accent pl-6">
+      <h3 class="font-semibold">August 2024 — Centre National de l’Informatique (CNI) Tunisia </h3>
+      <p class="text-gray-400">End of year project internship.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- HOBBIES -->
+<section class="px-10 py-32 max-w-6xl mx-auto reveal">
+  <h2 class="text-4xl font-semibold mb-12">
+    <span class="lang-en">Hobbies</span>
+    <span class="lang-fr hidden">Loisirs</span>
+  </h2>
+
+  <div class="grid md:grid-cols-5 gap-6">
+    <!-- Art -->
+    <div class="bg-card p-6 rounded-xl text-center">
+      <p class="font-semibold">🎨 Art</p>
+      <p class="text-sm mt-2 lang-en">A decade exploring anatomy, animation, and the art of creating vivid, immersive scenes.</p>
+      <p class="text-sm mt-2 lang-fr hidden">Une décennie d'exploration de l'anatomie, de l'animation et de l'art de créer des scènes immersives et vivantes.</p>
+    </div>
+
+    <!-- Music -->
+
+    <div class="bg-card p-6 rounded-xl text-center">
+        <p class="font-semibold">🎧 Music</p>
+        <p class="text-sm mt-2 lang-en">
+            Albums, artists, and tracks that shape my mood and fuel my creativity.
+        </p>
+        <p class="text-sm mt-2 lang-fr hidden">
+            Albums, artistes et morceaux qui façonnent mon humeur et nourrissent ma créativité.
+        </p>
+        <button onclick="openHobby('music')" class="mt-3 text-accent underline text-sm">
+            Click to expand
+        </button>
+    </div>
+    <template id="music-template">
+        <h3 class="text-2xl font-semibold mb-4">🎧 Music</h3>
+        <p>Exploring artists that inspire me, albums that define my mood, and songs I can’t stop replaying.</p>
+
+        <!-- Favorite Artists -->
+        <p class="font-semibold mt-4">Favorite Artists</p>
+        <div class="flex flex-wrap gap-4 mt-2">
+            <div class="text-center">
+            <img src="sabrina.png" alt="Sabrina Carpenter" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Sabrina Carpenter</p>
+            </div>
+            <div class="text-center">
+            <img src="billie.jpg" alt="Billie Eilish" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Billie Eilish</p>
+            </div>
+            <div class="text-center">
+            <img src="taylor.png" alt="Taylor Swift" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Taylor Swift</p>
+            </div>
+            <div class="text-center">
+            <img src="charli.png" alt="Charli XCX" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Charli XCX</p>
+            </div>
+            <div class="text-center">
+            <img src="gaga.png" alt="Lady Gaga" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Lady Gaga</p>
+            </div>
+            <div class="text-center">
+            <img src="toby.png" alt="Toby fox" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Toby Fox</p>
+            </div>
+            <div class="text-center">
+            <img src="jorge.jpg" alt="Jorge Rivera-Herrans" class="w-20 h-20 rounded-full object-cover shadow hover:scale-105 transition">
+            <p class="text-sm mt-1">Jorge Rivera</p>
+            </div>
+        </div>
+
+        <!-- Favorite Albums -->
+        <p class="font-semibold mt-4">Favorite Albums</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-2">
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="sabrina short n sweet deluxe.jpg"
+                    alt="Short and Sweet Deluxe"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="sabrina short n sweet back.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">Short and Sweet Deluxe</p>
+            </div>
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="hamilton front.jpeg"
+                    alt="Hamilton"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="hamilton back.jpg"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">Hamilton</p>
+            </div>
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="man's best friend front.jpg"
+                    alt="Man's Best Friend"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="Man's best friend back.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">Man's Best Friend</p>
+            </div>
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="Hit me hard and soft.png"
+                    alt="Hit Me Hard and Soft"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="hmhas baack.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">Hit Me Hard and Soft</p>
+            </div>
+
+           
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="brat front.png"
+                    alt="brat"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="brat back.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">brat</p>
+            </div>
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="hazbin season 1.png"
+                    alt="Hazbin Hotel"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="hazbin back.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">Hazbin Hotel</p>
+            </div>
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="midnight front.png"
+                    alt="Midnight"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="midnight back.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">Midnight</p>
+            </div>
+
+            
+            <div class="flex flex-col items-center">
+                <div class="relative group w-full aspect-square">
+                <img src="ttpd front.png"
+                    alt="The Tortured Poets Department"
+                    class="w-full h-full object-cover rounded-lg shadow">
+                <img src="ttpd back.png"
+                    alt="Back cover"
+                    class="absolute inset-0 w-full h-full object-cover rounded-lg shadow
+                            opacity-0 group-hover:opacity-100 transition">
+                </div>
+                <p class="text-center mt-2 text-sm">The Tortured Poets Department</p>
+            </div>
+
+            </div>
+
+        <br>
+        <br>
+        <!-- Spotify Tracks -->
+        <p class="font-semibold mt-4">Current Favorite Songs</p>
+        <div class="flex flex-col gap-4 mt-2">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/25jgQBxuUkGDdCG1WGKKN9?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7cjoZVmWe2xsGR4wcXiV2v?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5pG4nmg7DUdKiUiW7u9O4V" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2WgyOP8Z1D6GQYumCwH4Dk" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3sK8wGT43QFpWrvNQsrQya" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0GtidKqEXN6f2iVCvq2tz0" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4t9PBD27dndlf6YMBK2ROc" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3SEVc1OeCtFmVVJPtWzq3P" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/21gmvAVeqXiSUbvJPesXsL" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5QBozbgRWIYDSriHCRTsXd" width="100%" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </template>
+
+
+    <!-- Reading -->
+    <div class="bg-card p-6 rounded-xl text-center">
+      <p class="font-semibold">📚 Reading</p>
+      <p class="text-sm mt-2 lang-en">Exploring fantastical worlds, self-development journeys, and stories that spark imagination.</p>
+      <p class="text-sm mt-2 lang-fr hidden">Exploration de mondes fantastiques, parcours de développement personnel et histoires qui stimulent l'imagination.</p>
+      <button onclick="openHobby('reading')" class="mt-3 text-accent underline text-sm">Click to expand</button>
+    </div>
+
+    <!-- Sports -->
+    <div class="bg-card p-6 rounded-xl text-center">
+      <p class="font-semibold">🏃‍♀️ Sports</p>
+      <p class="text-sm mt-2 lang-en">Staying active with judo, hip hop, cycling, and regular gym sessions to energize body and mind.</p>
+      <p class="text-sm mt-2 lang-fr hidden">Maintenir le corps actif avec le judo, le hip hop, le cyclisme et des séances de gym régulières pour stimuler le corps et l'esprit.</p>
+      <button onclick="openHobby('sports')" class="mt-3 text-accent underline text-sm">Click to expand</button>
+    </div>
+
+    <!-- Gaming -->
+    <div class="bg-card p-6 rounded-xl text-center">
+      <p class="font-semibold">🎮 Gaming</p>
+      <p class="text-sm mt-2 lang-en">Immersed in RPGs and story-driven games, exploring worlds and creating narratives.</p>
+      <p class="text-sm mt-2 lang-fr hidden">Plongée dans les RPG et jeux narratifs, exploration de mondes et création d'histoires inspirées par ma passion pour le récit interactif.</p>
+      <button onclick="openHobby('gaming')" class="mt-3 text-accent underline text-sm">Click to expand</button>
+    </div>
+  </div>
+</section>
+
+<!-- Hobby Modal -->
+<div id="hobbyModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+  <div class="bg-card text-white p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-[90vh] transform scale-90 transition-transform duration-300">
+    <button class="absolute top-2 right-2 text-gray-300 text-3xl font-bold" onclick="closeHobby()">&times;</button>
+    <div id="hobbyContent"></div>
+  </div>
+</div>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="px-10 py-32 max-w-6xl mx-auto reveal">
+  <h2 class="text-4xl font-bold mb-12">Certificates & Diplomas</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('IEEE.png')">
+      <img src="IEEE.png" alt="Certificate 3" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">IEEE line follower robot</p>
+    </div>
+    
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('hult.png')">
+      <img src="hult.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">Hult Prize ISTIC competitor</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('scrum.png')">
+      <img src="scrum.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">Scrum Fundamentals Certified</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('ielts.png')">
+      <img src="ielts.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">IELTS test report form</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('TCF.png')">
+      <img src="TCF.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">French test TCF</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('national bachelor.png')">
+      <img src="national bachelor.png" alt="Certificate 2" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">Computer engineering Bachelor Degree</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+  <div class="relative">
+    <button class="absolute top-2 right-2 text-white text-3xl" onclick="closeCertificate()">&times;</button>
+    <img id="modalImage" src="" alt="Certificate" class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-lg">
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 text-gray-500 text-sm">
+  © 2026 Lyne GHRIBI 
+</footer>
+
+<script>
+  function toggleLang() {
+    document.querySelectorAll('.lang-en').forEach(e => e.classList.toggle('hidden'));
+    document.querySelectorAll('.lang-fr').forEach(e => e.classList.toggle('hidden'));
+  }
+
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 120) {
+        el.classList.add('active');
+      }
+    });
+  });
+
+  function openCertificate(src) {
+    const modal = document.getElementById('certificateModal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = src;
+    modal.classList.remove('hidden');
+  }
+
+  function closeCertificate() {
+    const modal = document.getElementById('certificateModal');
+    modal.classList.add('hidden');
+  }
+
+  // Optional: close modal when clicking outside the image
+  document.getElementById('certificateModal').addEventListener('click', (e) => {
+    if (e.target.id === 'certificateModal') closeCertificate();
+  });
+
+
+
+  const hobbyData = {
+    reading: {
+      en: `
+        <h3 class="text-2xl font-semibold mb-4">📚 Reading</h3>
+        <p>Diving into fantastical worlds, personal development journeys, and stories that spark imagination.</p>
+        
+        <strong class="mt-2 block">📖 Non-fiction:</strong>
+        <ul class="list-disc pl-6 mt-1">
+        <li>Rich Dad Poor Dad</li>
+        <li>Surrounded by Idiots</li>
+        <li>The Subtle Art of Not Giving a F*ck</li>
+        <li>Atomic Habits</li>
+        </ul>
+
+        <strong class="mt-2 block">📚 Novels:</strong>
+        <ul class="list-disc pl-6 mt-1">
+        <li>The Seven Husbands of Evelyn Hugo</li>
+        <li>Percy Jackson series</li>
+        <li>One Last Stop</li>
+        <li>The Priory of the Orange Tree (still reading)</li>
+        </ul>`,
+      fr: `
+        <h3 class="text-2xl font-semibold mb-4">📚 Lecture</h3>
+        <p>Exploration de mondes fantastiques, parcours de développement personnel et histoires qui stimulent l'imagination.</p>
+        
+        <strong class="mt-2 block">📖 Développement personnel :</strong>
+        <ul class="list-disc pl-6 mt-1">
+        <li>Rich Dad Poor Dad</li>
+        <li>Surrounded by Idiots</li>
+        <li>The Subtle Art of Not Giving a F*ck</li>
+        <li>Atomic Habits</li>
+        </ul>
+
+        <strong class="mt-2 block">📚 Romans :</strong>
+        <ul class="list-disc pl-6 mt-1">
+        <li>The Seven Husbands of Evelyn Hugo</li>
+        <li>Série Percy Jackson</li>
+        <li>One Last Stop</li>
+        <li>The Priory of the Orange Tree (en cours de lecture)</li>
+        </ul>`
+    },
+    sports: {
+      en: `<h3 class="text-2xl font-semibold mb-4">🏃‍♀️ Sports</h3>
+           <ul class="list-disc pl-6 mt-2">
+             <li>Judo – Beginner, Mondays at Université d’Orléans STAPS, 20h–22h</li>
+             <li>Hip Hop – Tuesdays, 18h–20h</li>
+             <li>Cycling class – Thursdays, 14h30–16h30</li>
+             <li>Gym – 3–4 times per week</li>
+           </ul>`,
+      fr: `<h3 class="text-2xl font-semibold mb-4">🏃‍♀️ Sports</h3>
+           <ul class="list-disc pl-6 mt-2">
+             <li>Judo – Débutante, lundis à l’Université d’Orléans STAPS, 20h–22h</li>
+             <li>Hip Hop – Mardis, 18h–20h</li>
+             <li>Cours de cyclisme – Jeudis, 14h30–16h30</li>
+             <li>Gym – 3 à 4 fois par semaine</li>
+           </ul>`
+    },
+    gaming: {
+      en: `
+        <h3 class="text-2xl font-semibold mb-4">🎮 Gaming</h3>
+        <p>Immersed in RPGs and story-driven games, crafting narratives and exploring virtual worlds inspired by my love of interactive storytelling.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+          <img src="undertale.jpg" alt="Game Screenshot 1" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+          <img src="omori.jpg" alt="Game Screenshot 2" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+          <img src="valo.jpg" alt="Game Screenshot 3" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+        </div>
+      `,
+      fr: `
+        <h3 class="text-2xl font-semibold mb-4">🎮 Jeux Vidéo</h3>
+        <p>Plongée dans les RPG et jeux narratifs, création d'histoires et exploration de mondes virtuels inspirés par ma passion pour le récit interactif.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+          <img src="undertale.jpg" alt="Capture de jeu 1" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+          <img src="omori.jpg" alt="Capture de jeu 2" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+          <img src="valo.jpg" alt="Capture de jeu 3" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+        </div>
+      `
+    }
+  };
+
+  let currentLang = document.documentElement.lang || 'en';
+
+  function openHobby(hobby) {
+    const modal = document.getElementById('hobbyModal');
+    const content = document.getElementById('hobbyContent');
+
+    // Always clear previous content
+    content.innerHTML = '';
+
+    if (hobby === 'music') {
+        const template = document.getElementById('music-template');
+        const clone = template.content.cloneNode(true);
+        content.appendChild(clone);
+    } else {
+        content.innerHTML = hobbyData[hobby][currentLang];
+    }
+
+    modal.classList.remove('hidden');
+
+    setTimeout(() => {
+        modal.firstElementChild.classList.add('scale-100');
+    }, 10);
+}
+
+  function closeHobby() {
+    const modal = document.getElementById('hobbyModal');
+    modal.firstElementChild.classList.remove('scale-100');
+    setTimeout(() => modal.classList.add('hidden'), 200);
+  }
+
+  document.getElementById('hobbyModal').addEventListener('click', (e) => {
+    if (e.target.id === 'hobbyModal') closeHobby();
+  });
+
+
+  const projects = {
+    throughput: `
+      <h2 class="text-3xl font-bold mb-4">
+        Automated Wi-Fi Qualification tests and Throughput Analysis Platform.
+      </h2>
+      <p class="text-gray-400 mb-6">
+        During my professional internship, I developed a Wi-Fi throughput testing platform that automates the existing process. It allows users to send tests to the setup, receive ready-made reports with graphs,
+         and create custom test cases or use pre-configured test packages.
+         <br>
+         <br>
+         To learn more check the links bellow:
+      </p>
+      <ul class="space-y-3">
+        <li><a class="text-accent hover:underline" href="rapport pfe.pdf"> Technical Report</a></li>
+        <li><a class="text-accent hover:underline" href="PyWATT.pptx"> Presentation</a></li>
+        <li><a class="text-accent hover:underline" href="demo.mp4"> Demo Video</a></li>
+      </ul>
+    `,
+     vitawise: `
+    <h2 class="text-3xl font-bold mb-4">
+      VITAWise – Smart Health Monitoring Dashboard
+    </h2>
+    <p class="text-gray-400 mb-6">
+      During our early IoT semester, we developed VITAWise, a hypothetical smartwatch dashboard. The platform was designed to allow doctors to monitor patients' vital signs in real time, including heart rate, body temperature, and other key health parameters. While the smartwatch itself was conceptual, the focus was on creating a functional and intuitive dashboard interface for healthcare monitoring.
+      <br><br>
+      To explore the project further, check the links below:
+    </p>
+    <ul class="space-y-3">
+      <li><a class="text-accent hover:underline" href="https://lyne-gh.github.io/VITAWise-project/" target="_blank">Hosted Website</a></li>
+      <li><a class="text-accent hover:underline" href="VITAWISE.pptx">Presentation</a></li>
+      <li><a class="text-accent hover:underline" href="Rapport.pdf">Technical Report</a></li>
+      <li><a class="text-accent hover:underline" href="study.pdf">Case Study</a></li>
+    </ul>
+  `,
+  };
+
+  function openProjectModal(id) {
+    document.getElementById("project-modal-content").innerHTML = projects[id];
+    document.getElementById("project-modal").classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  }
+
+  function closeProjectModal() {
+    document.getElementById("project-modal").classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeProjectModal();
+  });
+  
+</script>
+
+</body>
+</html>

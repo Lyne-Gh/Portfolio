@@ -140,31 +140,6 @@
   </p>
 </section>
 
-<!-- CURIOSITY FEED -->
-<section class="px-10 py-32 bg-black/20 reveal">
-  <h2 class="text-4xl font-bold mb-12">Curiosity Feed</h2>
-
-  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-    <div class="bg-card p-6 rounded-xl">
-    📘 Currently learning 
-    <strong>The Complete Web Development Bootcamp</strong> by Angela Yu on 
-    <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="text-accent underline" target="_blank">Udemy</a> — <em>1/3 completed</em>
-    </div>
-    <div class="bg-card p-6 rounded-xl">
-    ▶️ Watching <strong>Beginner’s Guide to GameMaker</strong> by 
-    <a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP" class="text-accent underline" target="_blank">Sara Spalding</a>, 
-    inspired by my interest in RPG game development, especially games like <em>Undertale</em>.
-    </div>
-
-    <div class="bg-card p-6 rounded-xl">
-    ▶️ Watching <strong>“Hamilton and the Death of the Obama Era”</strong> by 
-    <a href="https://www.youtube.com/watch?v=X5aI2AGvkb4" class="text-accent underline" target="_blank">Alexander Avila</a>, 
-    a longform documentary‑style video essay examining the cultural and political influence of the musical *Hamilton* in the context of American politics and the Obama era.
-    </div>
-
-
-  </div>
-</section>
 
 <!-- PROJECTS -->
 <section id="projects" class="px-10 py-32 max-w-7xl mx-auto reveal">
@@ -172,7 +147,7 @@
 
   <div class="grid md:grid-cols-3 gap-8">
 
-    <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
+    <div id="pywatt-project" class="bg-card p-6 rounded-xl transition-shadow duration-500">
       <h3 class="font-semibold text-xl mb-2">
         Automated Wi-Fi Qualification tests and Throughput Analysis Platform.
       </h3>
@@ -290,35 +265,209 @@
   </div>
 </div>
 
-
-
 <!-- EXPERIENCE -->
 <section id="experience" class="px-10 py-32 bg-black/20 reveal">
-  <h2 class="text-4xl font-bold mb-12">Experience</h2>
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12">
+      <span class="lang-en">Experience</span>
+      <span class="lang-fr hidden">Expérience</span>
+    </h2>
 
-  <div class="max-w-4xl space-y-8">
-    <div class="border-l-4 border-accent pl-6">
-      <h3 class="font-semibold">September 1st 2025 — France </h3>
-      <p class="text-gray-400">Final year student Studying computer science at the University of Orléans. </p>
+    <div class="max-w-4xl space-y-10">
+
+      <!-- University -->
+      <div class="border-l-4 border-accent pl-6">
+        <h3 class="font-semibold lang-en">
+          2025 — University of Orléans, France
+        </h3>
+
+        <h3 class="font-semibold lang-fr hidden">
+          2025 — Université d'Orléans, France
+        </h3>
+
+        <p class="text-gray-400 lang-en">
+          Final year student in 
+          <a href="https://www.univ-orleans.fr/fr/sciences-techniques/formation/informatique/licence" 
+             target="_blank" 
+             class="text-accent hover:underline">
+             Licence Informatique — Parcours Ingénierie (ING)
+          </a>.
+        </p>
+
+        <p class="text-gray-400 lang-fr hidden">
+          Étudiante en dernière année de 
+          <a href="https://www.univ-orleans.fr/fr/sciences-techniques/formation/informatique/licence" 
+             target="_blank" 
+             class="text-accent hover:underline">
+             Licence Informatique — Parcours Ingénierie (ING)
+          </a>.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-en">
+          The program provides strong foundations in software engineering, 
+          algorithms, systems, and web technologies.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-fr hidden">
+          La formation offre de solides bases en génie logiciel, 
+          algorithmique, systèmes et technologies web.
+        </p>
+      </div>
+
+      <!-- Sagemcom -->
+      <div class="border-l-4 border-accent pl-6">
+        <h3 class="font-semibold lang-en">
+          Feb – May 2025 — Sagemcom, Megrine
+        </h3>
+
+        <h3 class="font-semibold lang-fr hidden">
+          Fev – Mai 2025 — Sagemcom, Megrine
+        </h3>
+
+        <p class="text-gray-400 lang-en">
+          End-of-study internship within the Automation Team.
+        </p>
+
+        <p class="text-gray-400 lang-fr hidden">
+          Stage de fin d’études au sein de l’équipe Automation.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-en">
+          Contributed to the development of a WiFi average throughput 
+          testing platform called 
+          <a href="#projects" onclick="highlightPywatt()" class="font-medium text-accent hover:underline transition">PyWatt</a>.
+          Worked on automation processes and performance validation tools.  
+          More details are available in the Projects section.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-fr hidden">
+          Contribution au développement d’une plateforme de test du débit moyen WiFi 
+          nommée 
+          <a href="#projects" onclick="highlightPywatt()" class="font-medium text-accent hover:underline transition">PyWatt</a>.
+          Travail sur les processus d’automatisation et les outils de validation des performances.  
+          Plus de détails sont disponibles dans la section Projets.
+        </p>
+      </div>
+
+      <!-- CNI -->
+      <div class="border-l-4 border-accent pl-6">
+        <h3 class="font-semibold lang-en">
+          August 2024 — National Centre of Information technologie (CNI), Tunisia
+        </h3>
+
+        <h3 class="font-semibold lang-fr hidden">
+            Août 2024 — Centre National de l’Informatique (CNI), Tunisie
+        </h3>
+
+        <p class="text-gray-400 lang-en">
+          Summer internship — Web Development.
+        </p>
+
+        <p class="text-gray-400 lang-fr hidden">
+          Stage d’été — Développement Web.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-en">
+          Developed an admin platform with a secure authentication system 
+          allowing management of training cycles and trainers, as well as 
+          applicant filtering and validation.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-fr hidden">
+          Développement d’une plateforme d’administration avec un système d’authentification sécurisé 
+          permettant la gestion des cycles de formation et des formateurs, 
+          ainsi que le filtrage et la validation des candidats.
+        </p>
+
+        <p class="text-gray-300 mt-2 lang-en">
+          Also built a registration website enabling applicants to enroll 
+          in available training sessions based on dates.
+        </p>
+
+        <p class="text-gray-300 mt-2 lang-fr hidden">
+          Développement d’un site d’inscription permettant aux candidats 
+          de s’enregistrer aux formations disponibles selon les dates.
+        </p>
+
+        <p class="text-gray-300 mt-2 lang-en">
+          Worked with PHP, HTML, CSS, and JavaScript, consistently taking 
+          initiative and progressing ahead of expectations.
+        </p>
+
+        <p class="text-gray-300 mt-2 lang-fr hidden">
+          Utilisation de PHP, HTML, CSS et JavaScript, avec une forte prise d’initiative 
+          et une progression au-delà des attentes.
+        </p>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <br>
-   <div class="max-w-4xl space-y-8">
-    <div class="border-l-4 border-accent pl-6">
-      <h3 class="font-semibold">Feb - May 2025 — Sagemcom megrine </h3>
-      <p class="text-gray-400">End of study project internship.</p>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="px-10 py-32 max-w-6xl mx-auto reveal">
+  <h2 class="text-4xl font-bold mb-12">Certificates & Diplomas</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('IEEE.png')">
+      <img src="IEEE.png" alt="Certificate 3" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">IEEE line follower robot</p>
     </div>
-  </div>
-
-  <br>
-   <div class="max-w-4xl space-y-8">
-    <div class="border-l-4 border-accent pl-6">
-      <h3 class="font-semibold">August 2024 — Centre National de l’Informatique (CNI) Tunisia </h3>
-      <p class="text-gray-400">End of year project internship.</p>
+    
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('hult.png')">
+      <img src="hult.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">Hult Prize ISTIC competitor</p>
     </div>
-  </div>
 
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('scrum.png')">
+      <img src="scrum.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">Scrum Fundamentals Certified</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('ielts.png')">
+      <img src="ielts.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">IELTS test report form</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('TCF.png')">
+      <img src="TCF.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">French test TCF</p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('national bachelor.png')">
+      <img src="national bachelor.png" alt="Certificate 2" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">Computer engineering Bachelor Degree</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- CURIOSITY FEED -->
+<section class="px-10 py-32 bg-black/20 reveal">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12">Curiosity Feed</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div class="bg-card p-6 rounded-xl">
+            📘 Currently learning 
+            <strong>The Complete Web Development Bootcamp</strong> by Angela Yu on 
+            <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="text-accent underline" target="_blank">Udemy</a> — <em>1/3 completed</em>
+            </div>
+            <div class="bg-card p-6 rounded-xl">
+            ▶️ Watching <strong>Beginner’s Guide to GameMaker</strong> by 
+            <a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP" class="text-accent underline" target="_blank">Sara Spalding</a>, 
+            inspired by my interest in RPG game development, especially games like <em>Undertale</em>.
+            </div>
+
+            <div class="bg-card p-6 rounded-xl">
+            ▶️ Watching <strong>“Hamilton and the Death of the Obama Era”</strong> by 
+            <a href="https://www.youtube.com/watch?v=X5aI2AGvkb4" class="text-accent underline" target="_blank">Alexander Avila</a>, 
+            a longform documentary‑style video essay examining the cultural and political influence of the musical *Hamilton* in the context of American politics and the Obama era.
+            </div>
+        </div>
+  </div>
 </section>
 
 <!-- HOBBIES -->
@@ -419,7 +568,7 @@
                 <p class="text-center mt-2 text-sm">Hamilton</p>
             </div>
 
-            
+            <!--
             <div class="flex flex-col items-center">
                 <div class="relative group w-full aspect-square">
                 <img src="man's best friend front.jpg"
@@ -432,7 +581,7 @@
                 </div>
                 <p class="text-center mt-2 text-sm">Man's Best Friend</p>
             </div>
-
+             -->
             
             <div class="flex flex-col items-center">
                 <div class="relative group w-full aspect-square">
@@ -558,44 +707,6 @@
   </div>
 </div>
 
-<!-- CERTIFICATES -->
-<section id="certificates" class="px-10 py-32 max-w-6xl mx-auto reveal">
-  <h2 class="text-4xl font-bold mb-12">Certificates & Diplomas</h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-
-    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('IEEE.png')">
-      <img src="IEEE.png" alt="Certificate 3" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">IEEE line follower robot</p>
-    </div>
-    
-    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('hult.png')">
-      <img src="hult.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">Hult Prize ISTIC competitor</p>
-    </div>
-
-    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('scrum.png')">
-      <img src="scrum.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">Scrum Fundamentals Certified</p>
-    </div>
-
-    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('ielts.png')">
-      <img src="ielts.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">IELTS test report form</p>
-    </div>
-
-    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('TCF.png')">
-      <img src="TCF.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">French test TCF</p>
-    </div>
-
-    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('national bachelor.png')">
-      <img src="national bachelor.png" alt="Certificate 2" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">Computer engineering Bachelor Degree</p>
-    </div>
-    
-  </div>
-</section>
 
 <!-- Lightbox Modal -->
 <div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
@@ -656,9 +767,10 @@
         <li>Surrounded by Idiots</li>
         <li>The Subtle Art of Not Giving a F*ck</li>
         <li>Atomic Habits</li>
+        <li>How to Win Friends and Influence People</li>
         </ul>
 
-        <strong class="mt-2 block">📚 Novels:</strong>
+        <strong class="mt-2 block">📚 Fiction:</strong>
         <ul class="list-disc pl-6 mt-1">
         <li>The Seven Husbands of Evelyn Hugo</li>
         <li>Percy Jackson series</li>
@@ -675,6 +787,7 @@
         <li>Surrounded by Idiots</li>
         <li>The Subtle Art of Not Giving a F*ck</li>
         <li>Atomic Habits</li>
+        <li>How to Win Friends and Influence People</li>
         </ul>
 
         <strong class="mt-2 block">📚 Romans :</strong>
@@ -707,8 +820,8 @@
         <p>Immersed in RPGs and story-driven games, crafting narratives and exploring virtual worlds inspired by my love of interactive storytelling.</p>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
           <img src="undertale.jpg" alt="Game Screenshot 1" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
-          <img src="omori.jpg" alt="Game Screenshot 2" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
           <img src="valo.jpg" alt="Game Screenshot 3" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+          <img src="omori.jpg" alt="Game Screenshot 2" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
         </div>
       `,
       fr: `
@@ -716,8 +829,8 @@
         <p>Plongée dans les RPG et jeux narratifs, création d'histoires et exploration de mondes virtuels inspirés par ma passion pour le récit interactif.</p>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
           <img src="undertale.jpg" alt="Capture de jeu 1" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
-          <img src="omori.jpg" alt="Capture de jeu 2" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
           <img src="valo.jpg" alt="Capture de jeu 3" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
+          <img src="omori.jpg" alt="Capture de jeu 2" class="w-full h-32 object-cover rounded-lg shadow hover:scale-105 transition">
         </div>
       `
     }
@@ -808,6 +921,19 @@
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeProjectModal();
   });
+
+  function highlightPywatt() {
+  setTimeout(() => {
+    const card = document.getElementById("pywatt-project");
+
+    card.classList.add("shadow-lg", "shadow-accent/40");
+
+    setTimeout(() => {
+      card.classList.remove("shadow-lg", "shadow-accent/40");
+    }, 1500);
+
+  }, 500); 
+}
   
 </script>
 

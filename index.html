@@ -147,7 +147,7 @@
 
   <div class="grid md:grid-cols-3 gap-8">
 
-    <div id="pywatt-project" class="bg-card p-6 rounded-xl transition-shadow duration-500">
+    <div id="pywatt-project" class="bg-card p-6 rounded-xl hover:-translate-y-2 transition transition-shadow duration-500">
       <h3 class="font-semibold text-xl mb-2">
         Automated Wi-Fi Qualification tests and Throughput Analysis Platform.
       </h3>
@@ -222,25 +222,60 @@
         </button>
     </div>
 
-    <!-- Project 6 (Simple) -->
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
       <h3 class="font-semibold text-xl mb-2">
-        API Performance Benchmarking
+        Line Follower Robot – Robotics Competition
       </h3>
-      <p class="text-gray-400 text-sm">
-        Benchmarked REST APIs under high-load scenarios.
+
+      <div class="text-xs text-accent italic mt-2">
+        Technologies used: Arduino Uno, C/C++, IR Reflective Sensors, Motor Driver, CAD (SolidWorks)
+      </div>
+
+      <p class="text-gray-400 text-sm mb-4">
+        Designed and built an autonomous line-following robot for a robotics competition. 
+        Contributed to both the electrical and mechanical conception while respecting 
+        competition constraints such as size, stability, and response time.
       </p>
+
+      <p class="text-gray-400 text-sm mb-4">
+        Implemented control logic to process infrared reflective sensor data 
+        (detecting contrast between black and white surfaces) and dynamically 
+        adjust motor speed for accurate path tracking.
+      </p>
+
+      <a href="https://github.com/Lyne-Gh/Salvatore-line-follower-robot/tree/main" 
+        target="_blank" 
+        class="text-sm text-accent hover:underline">
+        View early prototype & source code →
+      </a>
     </div>
 
-    <!-- Project 7 (Simple) -->
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
-      <h3 class="font-semibold text-xl mb-2">
-        Monitoring & Alerting System
+      <h3 class="font-semibold text-xl mb-4">
+        My University Projects
       </h3>
-      <p class="text-gray-400 text-sm">
-        Real-time monitoring and alerting for system health.
-      </p>
+
+      <ul class="list-disc list-inside space-y-3 text-gray-400 text-sm">
+        <li>
+          <strong>N-1 Fantasie – RPG Game</strong><br>
+          <span class="text-xs text-accent italic">Technologies used: Java</span><br>
+          Developed a turn-based RPG game entirely in Java, focusing on core mechanics, character progression, and battle logic without a graphical interface.
+        </li>
+        <li>
+          <strong>Medico & Observo – Web Framework Projects</strong><br>
+          <span class="text-xs text-accent italic">Technologies used: Django, Python, HTML/CSS, JavaScript</span><br>
+          Built Django web applications.
+        </li>
+      </ul>
+      <br>
+
+      <a href="https://github.com/Lyne-Gh?tab=repositories" 
+         target="_blank" 
+         class="text-sm text-accent hover:underline">
+        View projects & source code on github →
+      </a>
     </div>
+
 
   </div>
 </section>
@@ -269,51 +304,11 @@
 <section id="experience" class="px-10 py-32 bg-black/20 reveal">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold mb-12">
-      <span class="lang-en">Experience</span>
-      <span class="lang-fr hidden">Expérience</span>
+      <span class="lang-en">Professional Experience</span>
+      <span class="lang-fr hidden">Expérience Professionnelle</span>
     </h2>
 
     <div class="max-w-4xl space-y-10">
-
-      <!-- University -->
-      <div class="border-l-4 border-accent pl-6">
-        <h3 class="font-semibold lang-en">
-          2025 — University of Orléans, France
-        </h3>
-
-        <h3 class="font-semibold lang-fr hidden">
-          2025 — Université d'Orléans, France
-        </h3>
-
-        <p class="text-gray-400 lang-en">
-          Final year student in 
-          <a href="https://www.univ-orleans.fr/fr/sciences-techniques/formation/informatique/licence" 
-             target="_blank" 
-             class="text-accent hover:underline">
-             Licence Informatique — Parcours Ingénierie (ING)
-          </a>.
-        </p>
-
-        <p class="text-gray-400 lang-fr hidden">
-          Étudiante en dernière année de 
-          <a href="https://www.univ-orleans.fr/fr/sciences-techniques/formation/informatique/licence" 
-             target="_blank" 
-             class="text-accent hover:underline">
-             Licence Informatique — Parcours Ingénierie (ING)
-          </a>.
-        </p>
-
-        <p class="text-gray-300 mt-3 lang-en">
-          The program provides strong foundations in software engineering, 
-          algorithms, systems, and web technologies.
-        </p>
-
-        <p class="text-gray-300 mt-3 lang-fr hidden">
-          La formation offre de solides bases en génie logiciel, 
-          algorithmique, systèmes et technologies web.
-        </p>
-      </div>
-
       <!-- Sagemcom -->
       <div class="border-l-4 border-accent pl-6">
         <h3 class="font-semibold lang-en">
@@ -397,6 +392,92 @@
         <p class="text-gray-300 mt-2 lang-fr hidden">
           Utilisation de PHP, HTML, CSS et JavaScript, avec une forte prise d’initiative 
           et une progression au-delà des attentes.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="px-10 py-32 bg-black/20 reveal">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12">
+      <span class="lang-en">Education</span>
+      <span class="lang-fr hidden">Formation</span>
+    </h2>
+
+    <div class="max-w-4xl space-y-10">
+
+      <!-- University of Orléans -->
+      <div class="border-l-4 border-accent pl-6">
+        <h3 class="font-semibold lang-en">
+          2025 – Present — University of Orléans, France
+        </h3>
+
+        <h3 class="font-semibold lang-fr hidden">
+          2025 – Présent — Université d'Orléans, France
+        </h3>
+
+        <p class="text-gray-400 lang-en">
+          Final year student in 
+          <a href="https://www.univ-orleans.fr/fr/sciences-techniques/formation/informatique/licence" 
+             target="_blank" 
+             class="text-accent hover:underline">
+             Licence Informatique — Parcours Ingénierie (ING)
+          </a>.
+        </p>
+
+        <p class="text-gray-400 lang-fr hidden">
+          Étudiante en dernière année de 
+          <a href="https://www.univ-orleans.fr/fr/sciences-techniques/formation/informatique/licence" 
+             target="_blank" 
+             class="text-accent hover:underline">
+             Licence Informatique — Parcours Ingénierie (ING)
+          </a>.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-en">
+          The program provides strong foundations in software engineering, 
+          algorithms, systems programming, databases, and web technologies.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-fr hidden">
+          La formation offre de solides bases en génie logiciel, 
+          algorithmique, programmation système, bases de données et technologies web.
+        </p>
+      </div>
+
+      <!-- Tunisia Bachelor -->
+      <div class="border-l-4 border-accent pl-6">
+        <h3 class="font-semibold lang-en">
+          2022 – 2025 — Higher Institute of Information and Communication Technologies (ISTIC),
+          University of Carthage, Tunisia
+        </h3>
+
+        <h3 class="font-semibold lang-fr hidden">
+          2022 – 2025 — Institut Supérieur des Technologies de l’Information et de la Communication (ISTIC),
+          Université de Carthage, Tunisie
+        </h3>
+
+        <p class="text-gray-400 lang-en">
+          Bachelor Degree in Computer Systems Engineering 
+          ("Computer Engineering") — Embedded Systems and Internet of Things.
+        </p>
+
+        <p class="text-gray-400 lang-fr hidden">
+          Licence en Ingénierie des Systèmes Informatiques 
+          (« Computer Engineering ») — Systèmes Embarqués et Internet des Objets.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-en">
+          Specialized in embedded programming, IoT architectures, microcontrollers, 
+          communication protocols, and real-time systems.
+        </p>
+
+        <p class="text-gray-300 mt-3 lang-fr hidden">
+          Spécialisation en programmation embarquée, architectures IoT, microcontrôleurs, 
+          protocoles de communication et systèmes temps réel.
         </p>
       </div>
 
@@ -936,6 +1017,5 @@
 }
   
 </script>
-
 </body>
 </html>

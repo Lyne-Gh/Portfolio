@@ -64,14 +64,14 @@
 
 <!-- HERO -->
 <section
-  class="relative min-h-screen flex items-center justify-center px-10 
-         bg-[url('bg2.jpg')] bg-cover bg-center overflow-hidden">
+  class="relative min-h-screen flex items-center justify-center px-12 
+          bg-cover bg-center bg-[url('bg2.jpg')] overflow-hidden">
 
   <!-- Fade overlay -->
   <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black"></div>
 
   <!-- Content -->
-  <div class="relative grid md:grid-cols-2 gap-16 items-center max-w-7xl">
+  <div class="relative grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
 
     <div>
       <h1 class="text-5xl font-bold mb-4 lang-en">
@@ -82,189 +82,251 @@
         Hi, Je suis <span class="text-accent">Lyne Ghribi</span>
       </h1>
 
+      <p class="text-accent uppercase tracking-widest text-sm mb-4">
+        <span class="lang-en">IoT • Creative Tech</span>
+        <span class="lang-fr hidden">IoT • Tech Créative</span>
+      </p>
+
       <p class="text-gray-100 text-lg mb-8 lang-en">
         I’m a 22-year-old creative with a background in computer engineering and computer science, passionate about using
         technology in smart, practical ways. I love designing IoT systems that make everyday things smarter from sustainable vending machines to connected coffee makers while exploring my artistic side through drawing and storytelling in video games. I aim to merge creativity and technology to craft experiences that are both innovative and meaningful.
       </p>
+
       <p class="text-gray-100 text-lg mb-8 lang-fr hidden">
         Je suis une créative de 22 ans avec une formation en ingénierie des systèmes informatiques et en informatique, passionnée par l’utilisation pratique et intelligente de la technologie. J’aime concevoir des systèmes IoT qui rendent le quotidien plus connecté des distributeurs automatiques durables aux machines à café intelligentes tout en explorant mon côté artistique à travers le dessin et la création d’histoires dans les jeux vidéo. Mon objectif est de combiner créativité
         et technologie pour imaginer des expériences à la fois innovantes et impactantes.
       </p>
 
-      <div class="space-x-4">
-        <a href="#projects" class="px-6 py-3 bg-accent text-black rounded-lg font-semibold">
+      <div class="flex gap-4">
+        <a href="#projects"
+           class="px-6 py-3 bg-accent text-black rounded-lg font-semibold
+                  hover:scale-105 transition-transform duration-300 shadow-lg">
           View Projects
         </a>
 
-        <a href="CV.pdf" download class="px-6 py-3 border border-gray-600 rounded-lg">
+        <a href="Cv eng.pdf" download
+           class="px-6 py-3 border border-gray-600 rounded-lg
+                  hover:bg-white hover:text-black transition-all duration-300">
             Download CV
         </a>
       </div>
     </div>
 
-    <div class="flex justify-center">
+    <!-- IMAGE -->
+    <div class="flex justify-center relative">
+
+      <!-- Glow -->
+      <div class="absolute w-80 h-80 bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+
       <img src="me.jpg"
-           class="w-64 h-64 rounded-full object-cover border-4 border-accent shadow-xl">
+           class="relative w-64 h-64 rounded-full object-cover 
+                  border-4 border-accent shadow-2xl
+                  float-animation
+                  hover:scale-105 transition-transform duration-500">
     </div>
 
   </div>
 </section>
 
+<style>
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+</style>
+
 <!-- ABOUT -->
-<section id="about" class="px-10 py-32 max-w-6xl mx-auto reveal">    
-    <h2 class="text-4xl font-semibold mb-8">
+<section id="about" class="px-10 py-32  bg-black/20 reveal">    
+  <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-semibold mb-8">
         <span class="lang-en">About Me</span>
         <span class="lang-fr hidden">À propos de moi</span>
     </h2>
 
-  <p class="text-gray-400 max-w-3xl mb-10 lang-en">
-    I am a computer engineering graduate specialized in IoT and currently completing my bachelor’s degree in computer science, 
-    aiming to earn my second bachelor’s degree by summer 2026.
-    <br>
-    During my time as a student at both The Higher Institute of Information Technologies and Communication and University of Orléans, 
-    I nurtured my curiosity by exploring a variety of projects and participating in clubs and extracurricular activities.
-    <br>
-    I thrive on learning, experimenting, and evolving, always seeking new ways to combine technology, creativity, 
-    and practical solutions to tackle real-world challenges.
-  </p>
+    <p class="text-gray-400 max-w-3xl mb-10 lang-en">
+      I am a computer engineering graduate specialized in IoT and currently completing my bachelor’s degree in computer science, 
+      aiming to earn my second bachelor’s degree by summer 2026.
+      <br>
+      <br>
+      During my time as a student at both The Higher Institute of Information Technologies and Communication and University of Orléans, 
+      I nurtured my curiosity by exploring a variety of projects and participating in clubs and extracurricular activities.
+      <br>
+      <br>
+      I thrive on learning, experimenting, and evolving, always seeking new ways to combine technology, creativity, 
+      and practical solutions to tackle real-world challenges.
+    </p>
 
-  <p class="text-gray-400 max-w-3xl mb-10 lang-fr hidden">
-    Je suis diplômée en ingénierie informatique, spécialisée en IoT, 
-    et je poursuis actuellement ma licence en informatique, avec l’objectif d’obtenir mon deuxième diplôme d’ici l’été 2026.
-    <br>
-    Durant mon parcours à la fois à l’Institut Supérieur des Technologies de l’Information et de la Communication et à l’Université d’Orléans, 
-    j’ai cultivé ma curiosité en explorant divers projets et en participant à des clubs et activités extracurriculaires.
-    <br>
-    Je m’épanouis dans l’apprentissage, l’expérimentation et l’évolution constante, 
-    toujours à la recherche de nouvelles façons de conjuguer technologie, créativité et solutions concrètes pour relever des défis réels.
-  </p>
+    <p class="text-gray-400 max-w-3xl mb-10 lang-fr hidden">
+      Je suis diplômée en ingénierie informatique, spécialisée en IoT, 
+      et je poursuis actuellement ma licence en informatique, avec l’objectif d’obtenir mon deuxième diplôme d’ici l’été 2026.
+      <br>
+      <br>
+      Durant mon parcours à la fois à l’Institut Supérieur des Technologies de l’Information et de la Communication et à l’Université d’Orléans, 
+      j’ai cultivé ma curiosité en explorant divers projets et en participant à des clubs et activités extracurriculaires.
+      <br>
+      <br>
+      Je m’épanouis dans l’apprentissage, l’expérimentation et l’évolution constante, 
+      toujours à la recherche de nouvelles façons de conjuguer technologie, créativité et solutions concrètes pour relever des défis réels.
+    </p>
+  </div>
 </section>
-
 
 <!-- PROJECTS -->
 <section id="projects" class="px-10 py-32 max-w-7xl mx-auto reveal">
-  <h2 class="text-4xl font-bold mb-12">Projects</h2>
+  <h2 class="text-4xl font-bold mb-12">
+    <span class="lang-en">Projects</span>
+    <span class="lang-fr hidden">Projets</span>
+  </h2>
 
   <div class="grid md:grid-cols-3 gap-8">
 
     <div id="pywatt-project" class="bg-card p-6 rounded-xl hover:-translate-y-2 transition transition-shadow duration-500">
       <h3 class="font-semibold text-xl mb-2">
-        Automated Wi-Fi Qualification tests and Throughput Analysis Platform.
+        <span class="lang-en">Automated Wi-Fi Qualification tests and Throughput Analysis Platform.</span>
+        <span class="lang-fr hidden">Plateforme automatisée de tests de qualification Wi-Fi et d'analyse de débit.</span>
       </h3>
 
       <div class="text-xs text-accent italic mt-2">
-        Technologies used: Django, Python, FastAPI, MariaDB, Bootstrap. 
+        <span class="lang-en">Technologies used: Django, Python, FastAPI, MariaDB, Bootstrap.</span>
+        <span class="lang-fr hidden">Technologies utilisées : Django, Python, FastAPI, MariaDB, Bootstrap.</span>
       </div>
 
       <p class="text-gray-400 text-sm mb-4">
-        During my professional internship, I developed a Wi-Fi throughput testing platform that automates the existing process. It allows users to send tests to the setup, 
-        receive ready-made reports with graphs, and create custom test cases or use pre-configured test packages.
+        <span class="lang-en">During my professional internship, I developed a Wi-Fi throughput testing platform that automates the existing process. It allows users to send tests to the setup, receive ready-made reports with graphs, and create custom test cases or use pre-configured test packages.</span>
+        <span class="lang-fr hidden">Lors de mon stage professionnel, j'ai développé une plateforme de tests de débit Wi-Fi qui automatise le processus existant. Elle permet aux utilisateurs d'envoyer des tests, de recevoir des rapports prêts à l'emploi avec graphiques, et de créer des cas de test personnalisés ou d'utiliser des packages préconfigurés.</span>
       </p>
       
       <button
         onclick="openProjectModal('throughput')"
         class="text-sm text-accent hover:underline"
       >
-        View details
+        <span class="lang-en">View details</span>
+        <span class="lang-fr hidden">Voir les détails</span>
       </button>
     </div>
 
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
         <h3 class="font-semibold text-xl mb-2">
-            Personal Website
+            <span class="lang-en">Personal Website</span>
+            <span class="lang-fr hidden">Site personnel</span>
         </h3>
 
         <div class="text-xs text-accent italic mt-2">
-            Technologies used: HTML, JavaScript, Tailwind CSS
+            <span class="lang-en">Technologies used: HTML, JavaScript, Tailwind CSS</span>
+            <span class="lang-fr hidden">Technologies utilisées : HTML, JavaScript, Tailwind CSS</span>
         </div>
 
         <p class="text-gray-400 text-sm mb-4">
-            This portfolio you're exploring is a passion project of mine, where I aimed to express myself in every section and detail while showcasing my projects, skills, and experience.
+            <span class="lang-en">This portfolio you're exploring is a passion project of mine, where I aimed to express myself in every section and detail while showcasing my projects, skills, and experience.</span>
+            <span class="lang-fr hidden">Ce portfolio que vous explorez est un projet passionnel, où j'ai voulu m'exprimer dans chaque section et détail tout en mettant en valeur mes projets, compétences et expériences.</span>
         </p>
     </div>
 
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
         <h3 class="font-semibold text-xl mb-2">
-            Autonest – Smart Parking System
+            <span class="lang-en">Autonest – Smart Parking System</span>
+            <span class="lang-fr hidden">Autonest – Système de parking intelligent</span>
         </h3>
 
         <div class="text-xs text-accent italic mt-2">
-            Technologies used: ESP32, MQTT, Wi-Fi, Distance Sensors, Node-RED
+            <span class="lang-en">Technologies used: ESP32, MQTT, Wi-Fi, Distance Sensors, Node-RED</span>
+            <span class="lang-fr hidden">Technologies utilisées : ESP32, MQTT, Wi-Fi, capteurs de distance, Node-RED</span>
         </div>
 
         <p class="text-gray-400 text-sm mb-4">
-            During our 5th semester IoT course, we developed Autonest, a smart parking system that detects car presence in real time. We also explored scalable features such as potential spot reservations for users.
+            <span class="lang-en">During our 5th semester IoT course, we developed Autonest, a smart parking system that detects car presence in real time. We also explored scalable features such as potential spot reservations for users.</span>
+            <span class="lang-fr hidden">Lors de notre cours IoT du 5ème semestre, nous avons développé Autonest, un système de parking intelligent qui détecte la présence des voitures en temps réel. Nous avons également exploré des fonctionnalités évolutives comme la réservation potentielle de places pour les utilisateurs.</span>
         </p>
 
         <a href="https://github.com/Lyne-Gh/Autonest-presentation/blob/main/Autonest%20presentation.pptx" target="_blank" class="text-sm text-accent hover:underline">
-            View Presentation
+            <span class="lang-en">View Presentation → </span>
+            <span class="lang-fr hidden">Voir la présentation →</span>
         </a>
     </div>
 
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
         <h3 class="font-semibold text-xl mb-2">
-            VITAWise – Smart Health Monitoring Dashboard
+            <span class="lang-en">VITAWise – Smart Health Monitoring Dashboard</span>
+            <span class="lang-fr hidden">VITAWise – Tableau de bord de suivi de santé intelligent</span>
         </h3>
 
         <div class="text-xs text-accent italic mt-2">
-            Technologies used: HTML, JavaScript, CSS
+            <span class="lang-en">Technologies used: HTML, JavaScript, CSS</span>
+            <span class="lang-fr hidden">Technologies utilisées : HTML, JavaScript, CSS</span>
         </div>
 
         <p class="text-gray-400 text-sm mb-4">
-            During our early IoT semester, we developed VITAWise, a hypothetical smartwatch dashboard where doctors can monitor patients’ vital signs in real time. The project focused on designing the system, interfaces, and workflow to track heart rate, body temperature, and other health parameters.
+            <span class="lang-en">During our early IoT semester, we developed VITAWise, a hypothetical smartwatch dashboard where doctors can monitor patients’ vital signs in real time. The project focused on designing the system, interfaces, and workflow to track heart rate, body temperature, and other health parameters.</span>
+            <span class="lang-fr hidden">Lors de notre premier semestre IoT, nous avons développé VITAWise, un tableau de bord hypothétique pour smartwatch permettant aux médecins de surveiller en temps réel les signes vitaux des patients. Le projet s'est concentré sur la conception du système, des interfaces et du flux de travail pour suivre le rythme cardiaque, la température corporelle et d'autres paramètres de santé.</span>
         </p>
 
         <button
             onclick="openProjectModal('vitawise')"
             class="text-sm text-accent hover:underline"
         >
-            View details
+            <span class="lang-en">View details</span>
+            <span class="lang-fr hidden">Voir les détails</span>
         </button>
     </div>
 
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
       <h3 class="font-semibold text-xl mb-2">
-        Line Follower Robot – Robotics Competition
+        <span class="lang-en">Line Follower Robot – Robotics Competition</span>
+        <span class="lang-fr hidden">Robot suiveur de ligne – Compétition de robotique</span>
       </h3>
 
       <div class="text-xs text-accent italic mt-2">
-        Technologies used: Arduino Uno, C/C++, IR Reflective Sensors, Motor Driver, CAD (SolidWorks)
+        <span class="lang-en">Technologies used: Arduino Uno, C/C++, IR Reflective Sensors, Motor Driver, CAD (SolidWorks)</span>
+        <span class="lang-fr hidden">Technologies utilisées : Arduino Uno, C/C++, capteurs IR réfléchissants, driver moteur, CAO (SolidWorks)</span>
       </div>
 
       <p class="text-gray-400 text-sm mb-4">
-        Designed and built an autonomous line-following robot for a robotics competition. 
-        Contributed to both the electrical and mechanical conception while respecting 
-        competition constraints such as size, stability, and response time.
+        <span class="lang-en">Designed and built an autonomous line-following robot for a robotics competition. Contributed to both the electrical and mechanical conception while respecting competition constraints such as size, stability, and response time.</span>
+        <span class="lang-fr hidden">Conçu et construit un robot autonome suiveur de ligne pour une compétition de robotique. J'ai contribué à la conception électrique et mécanique tout en respectant les contraintes de compétition telles que la taille, la stabilité et le temps de réponse.</span>
       </p>
 
       <p class="text-gray-400 text-sm mb-4">
-        Implemented control logic to process infrared reflective sensor data 
-        (detecting contrast between black and white surfaces) and dynamically 
-        adjust motor speed for accurate path tracking.
+        <span class="lang-en">Implemented control logic to process infrared reflective sensor data (detecting contrast between black and white surfaces) and dynamically adjust motor speed for accurate path tracking.</span>
+        <span class="lang-fr hidden">Implémenté la logique de contrôle pour traiter les données des capteurs infrarouges réfléchissants (détection du contraste entre surfaces noires et blanches) et ajuster dynamiquement la vitesse des moteurs pour un suivi précis du chemin.</span>
       </p>
 
       <a href="https://github.com/Lyne-Gh/Salvatore-line-follower-robot/tree/main" 
         target="_blank" 
         class="text-sm text-accent hover:underline">
-        View early prototype & source code →
+        <span class="lang-en">View early prototype & source code →</span>
+        <span class="lang-fr hidden">Voir le prototype initial et le code source →</span>
       </a>
     </div>
 
     <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition">
       <h3 class="font-semibold text-xl mb-4">
-        My University Projects
+        <span class="lang-en">My University Projects</span>
+        <span class="lang-fr hidden">Mes projets universitaires</span>
       </h3>
 
       <ul class="list-disc list-inside space-y-3 text-gray-400 text-sm">
         <li>
-          <strong>N-1 Fantasie – RPG Game</strong><br>
-          <span class="text-xs text-accent italic">Technologies used: Java</span><br>
-          Developed a turn-based RPG game entirely in Java, focusing on core mechanics, character progression, and battle logic without a graphical interface.
+          <strong><span class="lang-en">N-1 Fantasie – RPG Game</span><span class="lang-fr hidden">N-1 Fantasie – Jeu RPG</span></strong><br>
+          <span class="text-xs text-accent italic">
+            <span class="lang-en">Technologies used: Java</span>
+            <span class="lang-fr hidden">Technologies utilisées : Java</span>
+          </span><br>
+          <span class="lang-en">Developed a turn-based RPG game entirely in Java, focusing on core mechanics, character progression, and battle logic without a graphical interface.</span>
+          <span class="lang-fr hidden">Développé un jeu RPG au tour par tour entièrement en Java, en se concentrant sur la mécanique de base, la progression des personnages et la logique de combat sans interface graphique.</span>
         </li>
         <li>
-          <strong>Medico & Observo – Web Framework Projects</strong><br>
-          <span class="text-xs text-accent italic">Technologies used: Django, Python, HTML/CSS, JavaScript</span><br>
-          Built Django web applications.
+          <strong><span class="lang-en">Medico & Observo – Web Framework Projects</span><span class="lang-fr hidden">Medico & Observo – Projets sur framework web</span></strong><br>
+          <span class="text-xs text-accent italic">
+            <span class="lang-en">Technologies used: Django, Python, HTML/CSS, JavaScript</span>
+            <span class="lang-fr hidden">Technologies utilisées : Django, Python, HTML/CSS, JavaScript</span>
+          </span><br>
+          <span class="lang-en">Built Django web applications.</span>
+          <span class="lang-fr hidden">Création d'applications web Django.</span>
         </li>
       </ul>
       <br>
@@ -272,10 +334,10 @@
       <a href="https://github.com/Lyne-Gh?tab=repositories" 
          target="_blank" 
          class="text-sm text-accent hover:underline">
-        View projects & source code on github →
+        <span class="lang-en">View projects & source code on github →</span>
+        <span class="lang-fr hidden">Voir les projets et le code source sur github →</span>
       </a>
     </div>
-
 
   </div>
 </section>
@@ -312,11 +374,11 @@
       <!-- Sagemcom -->
       <div class="border-l-4 border-accent pl-6">
         <h3 class="font-semibold lang-en">
-          Feb – May 2025 — Sagemcom, Megrine
+          February – May 2025 — Sagemcom, Megrine
         </h3>
 
         <h3 class="font-semibold lang-fr hidden">
-          Fev – Mai 2025 — Sagemcom, Megrine
+          Février – Mai 2025 — Sagemcom, Megrine
         </h3>
 
         <p class="text-gray-400 lang-en">
@@ -399,8 +461,8 @@
   </div>
 </section>
 
-<!-- ================= EDUCATION ================= -->
-<section id="education" class="px-10 py-32 bg-black/20 reveal">
+<!-- EDUCATION  -->
+<section id="education" class="px-10 py-32 max-w-7xl/20  reveal">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold mb-12">
       <span class="lang-en">Education</span>
@@ -485,69 +547,161 @@
   </div>
 </section>
 
-
 <!-- CERTIFICATES -->
 <section id="certificates" class="px-10 py-32 max-w-6xl mx-auto reveal">
-  <h2 class="text-4xl font-bold mb-12">Certificates & Diplomas</h2>
+  <h2 class="text-4xl font-bold mb-12">
+    <span class="lang-en">Certificates & Diplomas</span>
+    <span class="lang-fr hidden">Certificats & Diplômes</span>
+  </h2>
 
   <div class="grid md:grid-cols-3 gap-6">
 
     <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('IEEE.png')">
       <img src="IEEE.png" alt="Certificate 3" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">IEEE line follower robot</p>
+      <p class="mt-2 text-center">
+        <span class="lang-en">IEEE line follower robot</span>
+        <span class="lang-fr hidden">Robot suiveur de ligne IEEE</span>
+      </p>
     </div>
     
     <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('hult.png')">
       <img src="hult.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">Hult Prize ISTIC competitor</p>
+      <p class="mt-2 text-center">
+        <span class="lang-en">Hult Prize ISTIC competitor</span>
+        <span class="lang-fr hidden">Concurrent du Hult Prize ISTIC</span>
+      </p>
     </div>
 
     <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('scrum.png')">
       <img src="scrum.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">Scrum Fundamentals Certified</p>
+      <p class="mt-2 text-center">
+        <span class="lang-en">Scrum Fundamentals Certified</span>
+        <span class="lang-fr hidden">Certification Scrum Fundamentals</span>
+      </p>
     </div>
 
     <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('ielts.png')">
       <img src="ielts.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">IELTS test report form</p>
+      <p class="mt-2 text-center">
+        <span class="lang-en">IELTS test report form</span>
+        <span class="lang-fr hidden">Rapport de test IELTS</span>
+      </p>
     </div>
 
     <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('TCF.png')">
       <img src="TCF.png" alt="Certificate 1" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">French test TCF</p>
+      <p class="mt-2 text-center">
+        <span class="lang-en">French test TCF</span>
+        <span class="lang-fr hidden">Test de français TCF</span>
+      </p>
     </div>
 
     <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('national bachelor.png')">
       <img src="national bachelor.png" alt="Certificate 2" class="w-full h-32 object-cover rounded-md">
-      <p class="mt-2 text-center">Computer engineering Bachelor Degree</p>
+      <p class="mt-2 text-center">
+        <span class="lang-en">Computer engineering Bachelor Degree</span>
+        <span class="lang-fr hidden">Licence en ingénierie informatique</span>
+      </p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('attestation_sagem.jpeg')">
+      <img src="attestation_sagem.jpeg" alt="Sagemcom Internship Certificate" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">
+        <span class="lang-en">Sagemcom Internship Certificate</span>
+        <span class="lang-fr hidden">Attestation de stage Sagemcom</span>
+      </p>
+    </div>
+
+    <div class="bg-card p-4 rounded-xl cursor-pointer" onclick="openCertificate('attestation cni.jpeg')">
+      <img src="attestation cni.jpeg" alt="CNI Internship Certificate" class="w-full h-32 object-cover rounded-md">
+      <p class="mt-2 text-center">
+        <span class="lang-en">CNI Internship Certificate</span>
+        <span class="lang-fr hidden">Attestation de stage CNI</span>
+      </p>
     </div>
     
   </div>
 </section>
 
+<!-- PERSONAL SIDE TOGGLE -->
+<section class="px-10 py-32 text-center  reveal">
+  <h2 class="text-3xl font-bold mb-6">
+    <span class="lang-en">Want to know the human behind the code?</span>
+    <span class="lang-fr hidden">Vous voulez découvrir la personne derrière le code ?</span>
+  </h2>
+
+  <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+    <span class="lang-en">
+      If you’d like to learn more about my hobbies, music taste, and the things that fuel my curiosity 
+    </span>
+    <span class="lang-fr hidden">
+      Si vous souhaitez en savoir plus sur mes loisirs, mes goûts musicaux et ce qui nourrit ma curiosité 
+    </span>
+  </p>
+
+  <button onclick="toggleExtraSection()" 
+          class="px-6 py-3 bg-accent text-black rounded-lg font-semibold 
+                 hover:scale-105 transition-transform duration-300">
+    <span class="lang-en">Click to explore</span>
+    <span class="lang-fr hidden">Cliquez pour explorer</span>
+  </button>
+</section>
+
+<!-- HIDDEN PERSONAL CONTENT -->
+<div id="extraSection" class="hidden">
+
 <!-- CURIOSITY FEED -->
 <section class="px-10 py-32 bg-black/20 reveal">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold mb-12">Curiosity Feed</h2>
+  <div class="max-w-6xl mx-auto">
+    
+    <h2 class="text-4xl font-bold mb-12">
+      <span class="lang-en">Curiosity Feed</span>
+      <span class="lang-fr hidden">Fil de Curiosité</span>
+    </h2>
 
-        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div class="bg-card p-6 rounded-xl">
-            📘 Currently learning 
-            <strong>The Complete Web Development Bootcamp</strong> by Angela Yu on 
-            <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="text-accent underline" target="_blank">Udemy</a> — <em>1/3 completed</em>
-            </div>
-            <div class="bg-card p-6 rounded-xl">
-            ▶️ Watching <strong>Beginner’s Guide to GameMaker</strong> by 
-            <a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP" class="text-accent underline" target="_blank">Sara Spalding</a>, 
-            inspired by my interest in RPG game development, especially games like <em>Undertale</em>.
-            </div>
+    <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-            <div class="bg-card p-6 rounded-xl">
-            ▶️ Watching <strong>“Hamilton and the Death of the Obama Era”</strong> by 
-            <a href="https://www.youtube.com/watch?v=X5aI2AGvkb4" class="text-accent underline" target="_blank">Alexander Avila</a>, 
-            a longform documentary‑style video essay examining the cultural and political influence of the musical *Hamilton* in the context of American politics and the Obama era.
-            </div>
-        </div>
+      <!-- Learning -->
+      <div class="bg-card p-6 rounded-xl">
+        <span class="lang-en">
+          📘 Currently learning <strong>The Complete Web Development Bootcamp</strong> by Angela Yu on 
+          <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="text-accent underline" target="_blank">Udemy</a> — <em>1/3 completed</em>
+        </span>
+        <span class="lang-fr hidden">
+          📘 Actuellement en train d'apprendre <strong>The Complete Web Development Bootcamp</strong> par Angela Yu sur 
+          <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" class="text-accent underline" target="_blank">Udemy</a> — <em>1/3 complété</em>
+        </span>
+      </div>
+
+      <!-- GameMaker -->
+      <div class="bg-card p-6 rounded-xl">
+        <span class="lang-en">
+          ▶️ Watching <strong>Beginner’s Guide to GameMaker</strong> by 
+          <a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP" class="text-accent underline" target="_blank">Sara Spalding</a>, 
+          inspired by my interest in RPG game development, especially games like <em>Undertale</em>.
+        </span>
+        <span class="lang-fr hidden">
+          ▶️ En train de regarder <strong>Beginner’s Guide to GameMaker</strong> par 
+          <a href="https://www.youtube.com/watch?v=nBCDzE9MDbk&list=PLPRT_JORnIur4v19PHXCtJ5P05vaokFdP" class="text-accent underline" target="_blank">Sara Spalding</a>, 
+          inspiré par mon intérêt pour le développement de RPG, en particulier des jeux comme <em>Undertale</em>.
+        </span>
+      </div>
+
+      <!-- Hamilton documentary -->
+      <div class="bg-card p-6 rounded-xl">
+        <span class="lang-en">
+          ▶️ Watching <strong>“Hamilton and the Death of the Obama Era”</strong> by 
+          <a href="https://www.youtube.com/watch?v=X5aI2AGvkb4" class="text-accent underline" target="_blank">Alexander Avila</a>, 
+          a longform documentary‑style video essay examining the cultural and political influence of the musical *Hamilton* in the context of American politics and the Obama era.
+        </span>
+        <span class="lang-fr hidden">
+          ▶️ En train de regarder <strong>“Hamilton and the Death of the Obama Era”</strong> par 
+          <a href="https://www.youtube.com/watch?v=X5aI2AGvkb4" class="text-accent underline" target="_blank">Alexander Avila</a>, 
+          un essai vidéo documentaire long format examinant l’influence culturelle et politique de la comédie musicale *Hamilton* dans le contexte de la politique américaine et de l’ère Obama.
+        </span>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -779,6 +933,8 @@
     </div>
   </div>
 </section>
+
+</div>
 
 <!-- Hobby Modal -->
 <div id="hobbyModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden transition-opacity duration-300">
@@ -1014,6 +1170,19 @@
     }, 1500);
 
   }, 500); 
+}
+
+function toggleExtraSection() {
+  const section = document.getElementById("extraSection");
+  const button = event.target;
+
+  section.classList.toggle("hidden");
+
+  if (section.classList.contains("hidden")) {
+    button.textContent = "Click to explore";
+  } else {
+    button.textContent = "Hide personal side ↑";
+  }
 }
   
 </script>
